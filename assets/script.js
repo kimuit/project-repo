@@ -16,6 +16,12 @@ var swiper = new Swiper(".home-slider", {
   loop:true,
 });
 
+function readvalue() {
+  var titleBook = parseInt(document.getElementById("bSearch").value);
+    document.getElementById("bSearch").innerHTML = titleBook;
+    alert("looking for ${titleBook}?")
+}
+
 document.addEventListener('DOMContentLoaded', function(){
   google.charts.load('current', {'packages':['corechart']});
   createArticleSection()
