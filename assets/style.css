@@ -212,3 +212,6 @@ header .icons #menu-bars{
     padding:.5rem 0;
     line-height: 1.5;
 }
+.swiper-pagination-bullet-active{
+    background:var(--green);
+}
