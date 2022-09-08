@@ -1,0 +1,14 @@
+.main-navbar{
+    background: lightsalmon;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-content{
+    display: flex;
+    padding: 10px;
+    box-shadow: 0px -5px 10px 0px grey;
+    border: 0px;
+    /* max-width: 98%; */
+    /* justify-content: space-between; */
+    background-color: #87bdd8;
+}
