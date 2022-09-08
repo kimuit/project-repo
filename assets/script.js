@@ -18,10 +18,10 @@ var swiper = new Swiper(".home-slider", {
 
 document.addEventListener('DOMContentLoaded', function(){
   google.charts.load('current', {'packages':['corechart']});
-  createNutritionSection()
+  createArticleSection()
 })
 
-function createNutritionSection(){
+function createArticleSection(){
   let data = fetchData()
   console.log("some data")
   console.log(data)
@@ -33,26 +33,26 @@ function createNutritionSection(){
       if(i==9){
         break
       }
-      buildFruitBox(data[i])   
+      buildBookShelf(data[i])   
      }
      })  
 }
 
-function buildFruitBox(fruit) {  
+function buildBookShelf(book) {  
   let box_container = document.querySelector('.box-container');
   let box = document.createElement('div')
   box.setAttribute('class','box')
-  let fruitName = document.createElement('h3')
-  fruitName.innerHTML = fruit.name 
-  let scientificName = document.createElement('h3')
-  scientificName.innerHTML = fruit.family + " " + fruit.genus
+  let bookName = document.createElement('h3')
+  bookName.innerHTML = book.name 
+  let libraryName = document.createElement('h3')
+  libraryName.innerHTML = book.family + " " + book.genus
 
   let chartDiv = document.createElement('div')
-  chartDiv.setAttribute('id',`${fruit.name}`)
-  let dataTable  = getDataTable(fruit) 
+  chartDiv.setAttribute('id',`${book.name}`)
+  let dataTable  = getDataTable(book) 
 
-  box.appendChild(fruitName)
-  box.appendChild(scientificName)
+  box.appendChild(bookName)
+  box.appendChild(libraryName)
   box.appendChild(chartDiv)
   box_container.appendChild(box)
 
@@ -62,7 +62,7 @@ function buildFruitBox(fruit) {
     let wrapper = new google.visualization.ChartWrapper({
       chartType: 'PieChart',
       dataTable: dataTable, 
-      containerId: `${fruit.name}`,
+      containerId: `${book.name}`,
       options: {
         legend: { position: 'top', alignment: 'start' },
         width: 350,
@@ -70,7 +70,7 @@ function buildFruitBox(fruit) {
         pieHole: 0.4,
         is3D:true,
         colors: ['#AAAEEF', '#E8AAEF', '#F0FF33', '#B647DD', '#47DD4B','#47DD84', '#07DDA5', ],
-        title: `${fruit.name}`
+        title: `${book.name}`
     }
     })
 

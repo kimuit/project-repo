@@ -3,8 +3,8 @@ body{
     background: lightcyan;
 }
 :root{
-    --green:#49458C;
-    --black:#192a56;
+    --green:#192a56;
+    --black:#14221c85;
     --light-color:#567;
     --box-shadow:0 .5rem 1.5rem rgba(177, 58, 58, 0.1);
 }
@@ -215,13 +215,13 @@ header .icons #menu-bars{
 .swiper-pagination-bullet-active{
     background:var(--green);
 }
-.fruits .box-container{
+.books .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap:1rem;
 }
 
-.fruits .box-container .box {
+.books .box-container .box {
     padding: .1rem;
     background: #fff;
     border-radius: .5rem;
