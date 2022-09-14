@@ -4,6 +4,8 @@ By Kimuita Kemoi X-TEC---co Kor~mo'om libraries
 ## 1. Description
 This is a website of a library system, designed to enable a reader monitors the presence or absence of books in the library. It aims to enable the reader get automated alerts about the availability and the state of a book. More funtionality will be added as time goes by
 
+When one searches of a book and submits, the website should be able to display it on the the date and time of the search and the name and date of publishing the book on a table format.
+
 ## 2. Installation
 ## 2.1 Requirements
 
