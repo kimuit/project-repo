@@ -20,34 +20,6 @@ document.getElementById("Btnone").addEventListener("click", displayDate);
 function displayDate() {
   document.getElementById("date").innerHTML = Date();
 }
-
-// function readvalue() {
-//   var titleBook = parseInt(document.getElementById("bSearch").value);
-//     document.getElementById("bSearch").innerHTML = titleBook;
-//     alert("looking for ${titleBook}?")
-// }
-
-// document.addEventListener('DOMContentLoaded', function(){
-//   google.charts.load('current', {'packages':['corechart']});
-//   createArticleSection()
-// })
-
-// function createArticleSection(){
-//   let data = fetchData()
-//   console.log("some data")
-//   console.log(data)
-//   data.then((data) =>{
-//     console.log("some data")
-//     console.log(data);
-//     let res = data.result
-//     for(let i=0; i<data.length; i++){
-//       if(i==9){
-//         break
-//       }
-//       buildBookShelf(data[i])   
-//      }
-//      })  
-// }
 // like section
 const clickListener = () => {
     let liked = document.querySelector('#like-button')
@@ -58,7 +30,7 @@ const clickListener = () => {
 
 const addLikes = () => {
     let likeCount = document.querySelector('#like-count')
-    likeCount.innerHTML = `${parseInt(likeCount.innerText) + 1} likes`
+    likeCount.innerHTML = `${parseInt(likeCount.innerText) + 2} likes`
 }
 
 // function buildBookShelf(book) {  
@@ -132,12 +104,9 @@ function displayDates() {
 }
 }
 getArticle();
-// function drawChart(){
-//   google.charts.load('current')
-//   google.charts.setOnLoadCallback(drawVisualization)
-  
-// }
 
+
+console.log('about to fecth data');
  fetch('http://openlibrary.org/search.json?author=tolkien')
 .then(res =>{
     if(res.ok){
@@ -148,6 +117,25 @@ getArticle();
 .then(data => console.log(data))
 .catch(error => console.log('Error'))
 
+// function readvalue() {
+//   var titleBook = parseInt(document.getElementById("bSearch").value);
+//     document.getElementById("bSearch").innerHTML = titleBook;
+//     alert("looking for ${titleBook}?")
+// }
+
+// document.addEventListener('DOMContentLoaded', function(){
+//   google.charts.load('current', {'packages':['corechart']});
+//   createArticleSection()
+// })
+
+// function createArticleSection(){
+//   let data = fetchData()
+//   console.log("some data")
+//   console.log(data)
+//   data.then((data) =>{
+//     console.log("some data")
+
+// }
 // async function fetchData(){
 
 //   return await fetch("http://localhost:5050/result",{
