@@ -21,6 +21,10 @@ function displayDate() {
   document.getElementById("date").innerHTML = Date();
 }
 // like section
+document.addEventListener('DOMContentLoaded', () => {
+    clickListener();
+    })
+
 const clickListener = () => {
     let liked = document.querySelector('#like-button')
     liked.addEventListener('click', () => {
@@ -30,9 +34,8 @@ const clickListener = () => {
 
 const addLikes = () => {
     let likeCount = document.querySelector('#like-count')
-    likeCount.innerHTML = `${parseInt(likeCount.innerText) + 2} likes`
+    likeCount.innerHTML = `${parseInt(likeCount.innerText) + 1} likes`
 }
-
 // function buildBookShelf(book) {  
 //   let box_container = document.querySelector('.box-container');
 //   let box = document.createElement('div')
@@ -52,23 +55,6 @@ const addLikes = () => {
 //   box_container.appendChild(box)
 
 //   console.log(" on load callback")
-  
-//   google.charts.setOnLoadCallback(function(){
-//     let wrapper = new google.visualization.ChartWrapper({
-//       chartType: 'PieChart',
-//       dataTable: dataTable, 
-//       containerId: `${book.name}`,
-//       options: {
-//         legend: { position: 'top', alignment: 'start' },
-//         width: 350,
-//         height: 350,
-//         pieHole: 0.4,
-//         is3D:true,
-//         colors: ['#AAAEEF', '#E8AAEF', '#F0FF33', '#B647DD', '#47DD4B','#47DD84', '#07DDA5', ],
-//         title: `${book.name}`
-//     }
-//     })
-
 //     wrapper.draw()
 //   }) 
 // }
@@ -86,10 +72,10 @@ async function getArticle(){
  }
 function second() {
      data.docs.forEach((e) => {
-    console.log(`${e.publish_date[0]}`);
+ kim = console.log(`${e.publish_date[1]}`);
       })
 }
-
+console.log();
 //   document.getElementById('lon').textContent = data.docs[1];
 // first();
 // second();
@@ -146,3 +132,4 @@ console.log('about to fecth data');
 //   )
 //   .then((res)=>res)
 // }
+// 

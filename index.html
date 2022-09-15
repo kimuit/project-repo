@@ -23,7 +23,10 @@
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
         <i class="fas fa-search" id="search-icon"></i>
-        <a href="#" class="fas fa-heart"></a>
+        <div class="likes-section">
+                <span id="like-count" class="likes">0 likes</span>
+                <button id="like-button" class="like-button">♥</button>
+            </div>
         <br><br>
        <div>
         <input type="text" id="bSearch" placeholder="     Search articles HERE">
@@ -92,6 +95,7 @@
 </tr>
 </table>
 </div>
+<div><p id="Name"></p></div>
 
 <!-- end of the feedback display section -->
 <section class="order" id="order">
@@ -123,11 +127,14 @@
             </div>
         </div>
 <div>
+    <!-- like section -->
         <input type="submit" value="Comment" class="btn">
      <div class="likes-section">
                 <span id="like-count" class="likes">0 likes</span>
                 <button id="like-button" class="like-button">♥</button>
             </div>
+
+            <!-- <a href="#" class="fas fa-heart"></a> -->
 </div>
     </form>
 
