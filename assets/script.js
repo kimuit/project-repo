@@ -72,10 +72,11 @@ async function getArticle(){
  }
 function second() {
      data.docs.forEach((e) => {
- kim = console.log(`${e.publish_date[1]}`);
+     console.log(`${e.publish_date[1]}`);
       })
+
 }
-console.log();
+console.log(data);
 //   document.getElementById('lon').textContent = data.docs[1];
 // first();
 // second();
