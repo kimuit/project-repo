@@ -23,14 +23,16 @@
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
         <i class="fas fa-search" id="search-icon"></i>
-        <a href="#" class="fas fa-heart"></a>
+        <div class="likes-section">
+                <span id="like-count" class="likes">0 likes</span>
+                <button id="like-button" class="like-button">♥</button>
+            </div>
         <br><br>
        <div>
-        <input type="text" id="bSearch" placeholder="      Search articles HERE">
+        <input type="text" id="bSearch" placeholder="     Search articles HERE">
         <!-- add a button -->
-    <br> <button type="submit" onclick="readValue()" class="submit"><a href="###" id="white">submit</a> </button>
-    <!-- </div> -->
-  
+    <br> <button type="submit" id="Btnone" class="submit"><a href="###" id="white">submit</a> </button>
+    </div>
     </header>
 <form action="" id="search-form">
     <input type="search" placeholder="search here..." name="" id="search-box">
@@ -46,7 +48,7 @@
                     <p>They stores the name and location of a data set (dsn/volume/unit). The master catalog usually stores only a data set high-level qualifier (HLQ) with the name of the user catalog, which contains the location of all data sets prefixed by this HLQ.</p>
                 </div>
                 <div class="image">
-                    <img src="./images/lib01.jpeg" alt="">
+                    <img src="./images/lib01.jpeg" alt="image01">
                 </div>
             </div>
 
@@ -78,6 +80,66 @@
     <div class="box-container">
         </div>
 </section>
+<br><br><br><br>
+<!-- start of the feedback display section -->
+<div class="center">
+<table id="table" style="color:rgb(15, 15, 15) ;">
+<tr style="border-bottom: solid 1px;"><th style="color: blue;">Date today <span id="date"></span></th></tr>
+<tr id="secondrow">
+<th>Book Title</th>
+<th>First date of publishing</th>
+</tr>
+<tr id="jsfeed">
+    <th><span id="Name"></span></th>
+    <th><span id="published"></span></th>
+</tr>
+</table>
+</div>
+<div><p id="Name"></p></div>
+
+<!-- end of the feedback display section -->
+<section class="order" id="order">
+
+    <h3 class="sub-heading">we appreciate your feedback </h3>
+    <h1 class="heading">Article info</h1>
+
+    <form action="" method="post">
+
+        <div class="inputBox">
+            <div class="input">
+                <span>your name</span>
+                <input type="text" placeholder="surname secondname">
+            </div>
+            <div class="input">
+                <span>your number</span>
+                <input type="number" placeholder="+254722002200">
+            </div>
+        </div>
+
+        <div class="inputBox">
+            <!-- <div class="input">
+                <span>your address</span>
+                <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+            </div> -->
+            <div class="input">
+                <span>your message</span>
+                <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+<div>
+    <!-- like section -->
+        <input type="submit" value="Comment" class="btn">
+     <div class="likes-section">
+                <span id="like-count" class="likes">0 likes</span>
+                <button id="like-button" class="like-button">♥</button>
+            </div>
+
+            <!-- <a href="#" class="fas fa-heart"></a> -->
+</div>
+    </form>
+
+</section>
+
 <section> <div class="btmfooter">
         <div class="bottoms">
             <h2 id="aboutUs">About kor~mo'om</h2>
